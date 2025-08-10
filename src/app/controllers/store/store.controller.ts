@@ -7,9 +7,9 @@ import { ApiBearerAuth, ApiOperation, ApiParam, ApiResponse, ApiTags } from "@ne
 import { ListUserStores } from "../../../app/usecases/store/listUserStores";
 import { User } from "../../../app/decorators/user.decorator";
 import UserEntity from "../../../domain/entities/users.entity";
-import { UpdatStore } from "src/app/usecases/store/UpdateStore";
-import UpdateStoreDto from "src/app/models/dtos/store/UpdateStore.dto";
-import StoreEntity from "src/domain/entities/stores.entity";
+import { UpdatStore } from "../../../app/usecases/store/UpdateStore";
+import UpdateStoreDto from "../../../app/models/dtos/store/UpdateStore.dto";
+import StoreEntity from "../../../domain/entities/stores.entity";
 
 @ApiBearerAuth()
 @ApiTags('Store')

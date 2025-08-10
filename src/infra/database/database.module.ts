@@ -19,12 +19,14 @@ export class DatabaseModule {
     return TypeOrmModule.forRoot({
       type: 'mysql',
       host: configuration().database.host,
-      port:configuration().database.port,
+      port: configuration().database.port,
       username: configuration().database.user,
       password: configuration().database.password,
       database: configuration().database.database,
       entities: DatabaseModule.provideEntities(),
-      synchronize: true,
+      synchronize: false, // Usar migrations para gerenciar o schema
+      migrations: [__dirname + '/../migrations/*.{ts,js}'],
+      migrationsRun: false
     })
   }
 }

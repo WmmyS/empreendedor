@@ -58,6 +58,22 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# migrations
+
+```bash
+# generate migration
+$ npm run migration:generate -- NomeDaMigration
+
+# run migrations
+$ npm run typeorm -- migration:run -d data-source.ts
+
+# revert migration
+$ migration:revert
+
+# generate migration by entities
+$ npm run typeorm -- migration:generate src/infra/migrations/InitialSchema -d data-source.ts
+```
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:

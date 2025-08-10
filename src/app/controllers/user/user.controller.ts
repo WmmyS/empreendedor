@@ -1,7 +1,7 @@
 import { RouteName } from '../../../app/decorators/route.name.decorator';
 import { ListUsers } from '../../usecases/user/listUsers';
 import { SignUser } from '../../usecases/user/signUser';
-import { Body, Controller, Get, Headers, Inject, Post } from "@nestjs/common";
+import { Body, Controller, Get, Inject, Post } from "@nestjs/common";
 import { RouteDescription } from '../../../app/decorators/route.description.decorator';
 import SignUserDto from '../../models/dtos/user/SignUser.dto';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
